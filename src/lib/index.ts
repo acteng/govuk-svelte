@@ -1,8 +1,10 @@
 export { default as ButtonGroup } from "./ButtonGroup.svelte";
 export { default as CheckboxGroup } from "./CheckboxGroup.svelte";
 export { default as Checkbox } from "./Checkbox.svelte";
+export { default as CollapsibleCard } from "./CollapsibleCard.svelte";
 export { default as DefaultButton } from "./DefaultButton.svelte";
 export { default as ErrorMessage } from "./ErrorMessage.svelte";
+export { default as FileInput } from "./FileInput.svelte";
 export { default as FormElement } from "./FormElement.svelte";
 export { default as MoneyInput } from "./MoneyInput.svelte";
 export { default as NumberInput } from "./NumberInput.svelte";
