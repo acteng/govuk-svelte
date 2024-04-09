@@ -3,6 +3,7 @@
   import { ErrorMessage, FormElement } from "./index.js";
 
   export let label: string;
+  export let hint = "";
   // A list of [value, label] representing the choices
   export let choices: [string, string][];
   // Make the first option the empty string
@@ -18,6 +19,9 @@
 
 <FormElement {label} {id}>
   <ErrorMessage {errorMessage} />
+  {#if hint}
+    <div class="govuk-hint">{hint}</div>
+  {/if}
   <select class="govuk-select" {id} bind:value {disabled} on:change>
     {#if emptyOption}
       <option value="" />
