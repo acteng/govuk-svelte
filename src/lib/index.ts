@@ -14,3 +14,4 @@ export { default as Select } from "./Select.svelte";
 export { default as TextArea } from "./TextArea.svelte";
 export { default as TextInput } from "./TextInput.svelte";
 export { default as WarningButton } from "./WarningButton.svelte";
+export { default as WarningText } from "./WarningText.svelte";
