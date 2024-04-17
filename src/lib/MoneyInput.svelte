@@ -41,8 +41,6 @@
   function multiply() {
     stringValue = prettyprint(value! * 1_000_000);
   }
-
-  // TODO Using the label as a unique ID, so users don't have to invent an arbitrary string
 </script>
 
 <FormElement {label} {id}>
