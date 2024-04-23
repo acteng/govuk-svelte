@@ -3,20 +3,17 @@
   import { FormElement } from "./index.js";
 
   export let label: string;
-  // Called with the file contents as text
-  export let loadFile: (text: string) => void;
+  // Called with the filename and file contents as text
+  export let onLoad: (filename: string, contents: string) => void;
 
   export let disabled = false;
 
   let fileInput: HTMLInputElement;
 
-  function onChange(e: Event) {
-    let reader = new FileReader();
-    reader.onload = (e) => {
-      loadFile(e.target!.result as string);
-    };
-    let files = fileInput.files!;
-    reader.readAsText(files[0]);
+  async function onChange(e: Event) {
+    let filename = fileInput.files![0].name;
+    let contents = await fileInput.files![0].text();
+    onLoad(filename, contents);
   }
 
   let id = uuidv4();
