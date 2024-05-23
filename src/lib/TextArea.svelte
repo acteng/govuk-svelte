@@ -3,6 +3,7 @@
   import { ErrorMessage, FormElement } from "./index.js";
 
   export let label: string;
+  export let hint = "";
   export let value: string;
   export let rows: number = 5;
   export let errorMessage = "";
@@ -12,5 +13,8 @@
 
 <FormElement {label} {id}>
   <ErrorMessage {errorMessage} />
+  {#if hint}
+    <div class="govuk-hint">{hint}</div>
+  {/if}
   <textarea class="govuk-textarea" {id} {rows} bind:value />
 </FormElement>
