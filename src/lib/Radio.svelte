@@ -22,9 +22,7 @@
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-label--s">
-      {legend}
-    </legend>
+    <label class="govuk-label govuk-label--s" for={id}>{legend}</label>
     <ErrorMessage {errorMessage} />
     {#if hint}
       <div class="govuk-hint">{hint}</div>
