@@ -4,6 +4,7 @@
 
   // A label for the entire group of radio buttons
   export let legend: string;
+  export let hint = "";
   // A list of [value, label] representing the choices
   export let choices: [string, string][];
   // Lay out radio buttons horizontally and decrease font size
@@ -25,6 +26,9 @@
       {legend}
     </legend>
     <ErrorMessage {errorMessage} />
+    {#if hint}
+      <div class="govuk-hint">{hint}</div>
+    {/if}
     <div
       class="govuk-radios"
       class:govuk-radios--inline={inlineSmall}
