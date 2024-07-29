@@ -1,3 +1,4 @@
+export { default as AutocompleteTextInput } from "./AutocompleteTextInput.svelte";
 export { default as ButtonGroup } from "./ButtonGroup.svelte";
 export { default as CheckboxGroup } from "./CheckboxGroup.svelte";
 export { default as Checkbox } from "./Checkbox.svelte";
