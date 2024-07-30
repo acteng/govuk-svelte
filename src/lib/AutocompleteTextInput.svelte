@@ -12,7 +12,7 @@
     let id = `${name}-${uuidv4()}`;
 </script>
   
-  <FormElement {label} id={`${name}-input`}>
+  <FormElement {label} id={`${name}-${id}-input`}>
     <input
       class="govuk-input govuk-input--width-20"
       id={`${id}-input`}
