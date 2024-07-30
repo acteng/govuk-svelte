@@ -8,8 +8,9 @@
     export let options: [string,string][];
     export let dataTestId: string = "";
     
-    let dataList: HTMLDataListElement;
     let id = `${name}-${uuidv4()}` 
+    // @ts-expect-error we know the id will be the right thing
+    let dataList: HTMLDataListElement = document.getElementById(`${id}-list`);
 
     $: {
        for (let option of options) {
