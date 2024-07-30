@@ -1,5 +1,6 @@
 <script lang="ts">
     import { FormElement } from "./index.js";
+    import {onMount} from "svelte";
     import { v4 as uuidv4 } from "uuid";
   
     export let label: string;
@@ -8,18 +9,7 @@
     export let options: [string,string][];
     export let dataTestId: string = "";
     
-    let id = `${name}-${uuidv4()}` 
-    // @ts-expect-error we know the id will be the right thing
-    let dataList: HTMLDataListElement = document.getElementById(`${id}-list`);
-
-    $: {
-       for (let option of options) {
-          let dataListOption = document.createElement("option");
-          dataListOption.value = option[0];
-          dataListOption.label = option[1];
-          dataList.appendChild(dataListOption);
-        }
-    } 
+    let id = `${name}-${uuidv4()}`;
 </script>
   
   <FormElement {label} id={`${name}-input`}>
@@ -30,6 +20,13 @@
       list={`${id}-list`}
       bind:value
     />
-    <datalist id={`${id}-list`} bind:this={dataList} />
+    <datalist id={`${id}-list`} >
+      {#each options as option}
+        <option 
+          value={option[0]}
+          label = {option[1]}
+        /> 
+      {/each}
+      </datalist>
   </FormElement>
   
