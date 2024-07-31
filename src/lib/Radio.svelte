@@ -3,7 +3,7 @@
   import { ErrorMessage } from "./index.js";
 
   // A label for the entire group of radio buttons
-  export let legend: string;
+  export let label: string;
   export let hint = "";
   // A list of [value, label] representing the choices
   export let choices: [string, string][];
@@ -23,7 +23,7 @@
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-label--s">
-      {legend}
+      {label}
     </legend>
     <ErrorMessage {errorMessage} />
     {#if hint}
