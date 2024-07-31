@@ -11,6 +11,7 @@ export { default as GenericSelect } from "./GenericSelect.svelte";
 export { default as MoneyInput } from "./MoneyInput.svelte";
 export { default as NumberInput } from "./NumberInput.svelte";
 export { default as Radio } from "./Radio.svelte";
+export { default as RadioWithCustom } from "./RadioWithCustom.svelte";
 export { default as SecondaryButton } from "./SecondaryButton.svelte";
 export { default as Select } from "./Select.svelte";
 export { default as SelectWithCustom } from "./SelectWithCustom.svelte";
