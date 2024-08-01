@@ -1,6 +1,7 @@
 <script lang="ts">
   import "../style/main.css";
   import {
+    AlphaBanner,
     AutocompleteTextInput,
     ButtonGroup,
     CheckboxGroup,
@@ -30,7 +31,10 @@
     return [thing, thing];
   }
 
+  let contacts = [["First Dev", "first@dev.com"], ["Second Dev", "second@dev.com"], ["Third Dev", "third@dev.com"]]
+
 </script>
+<AlphaBanner {contacts} />
 
 <Radio
   label="Normal Radio"
