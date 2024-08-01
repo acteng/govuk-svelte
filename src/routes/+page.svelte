@@ -1,4 +1,5 @@
 <script lang="ts">
+  import "../style/main.css";
   import {
     AutocompleteTextInput,
     ButtonGroup,
