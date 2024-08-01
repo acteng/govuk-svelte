@@ -1,4 +1,4 @@
-export { default as AlphaBanner } from "./AlphaBanner.svelte"
+export { default as AlphaBanner } from "./AlphaBanner.svelte";
 export { default as AutocompleteTextInput } from "./AutocompleteTextInput.svelte";
 export { default as ButtonGroup } from "./ButtonGroup.svelte";
 export { default as CheckboxGroup } from "./CheckboxGroup.svelte";
