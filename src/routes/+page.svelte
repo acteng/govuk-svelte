@@ -32,15 +32,9 @@
   function pair<T>(thing: T): [T, T][] {
     return [thing, thing];
   }
-
-  let contacts = [
-    ["First Dev", "first@dev.com"],
-    ["Second Dev", "second@dev.com"],
-    ["Third Dev", "third@dev.com"],
-  ];
 </script>
 
-<AlphaBanner {contacts} />
+<AlphaBanner />
 
 <Radio label="Normal Radio" choices={options} value="" , />
 
