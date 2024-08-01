@@ -12,7 +12,8 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "setup-govuk": "sass src/style/main.sass src/style/main.css; rm -rf static/assets; mkdir -p static/assets; cp -R node_modules/govuk-frontend/dist/govuk/assets/ static/"
   },
   "exports": {
     ".": {
@@ -47,6 +48,8 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "dependencies": {
+    "govuk-frontend": "^5.4.1",
+    "sass": "^1.77.8",
     "uuid": "^9.0.1"
   }
 }

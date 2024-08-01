@@ -7,5 +7,8 @@ node_modules
 .env
 .env.*
 !.env.example
+static/
+*.css
+*.css.map
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
