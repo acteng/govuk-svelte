@@ -1,13 +1,8 @@
-<script lang="ts">
-  export let href: string;
-</script>
-
-<a
-  {href}
-  role="button"
-  draggable="false"
+<button
+  type="button"
   class="govuk-button govuk-button--start"
   data-module="govuk-button"
+  on:click
 >
   Start
   <svg
@@ -21,4 +16,4 @@
   >
     <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
   </svg>
-</a>
+</button>

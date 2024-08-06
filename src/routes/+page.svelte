@@ -7,12 +7,16 @@
     Select,
     SelectWithCustom,
     Footer,
+    StartButton,
   } from "../lib/index.js";
+  import { base } from "$app/paths";
 
   let choices = ["Option A", "Option B", "Option C"].map(
     (x) => [x, x] as [string, string],
   );
 </script>
+
+<StartButton on:click={() => window.alert("Start clicked")} />
 
 <AlphaBanner />
 
