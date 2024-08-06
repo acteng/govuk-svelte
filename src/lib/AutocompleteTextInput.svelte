@@ -6,11 +6,15 @@
   export let value: string;
   // A list of [value, label] pairs that can be autocompleted
   export let options: [string, string][];
+  export let hint = "";
 
   let id = uuidv4();
 </script>
 
 <FormElement {label} {id}>
+  {#if hint}
+    <div class="govuk-hint">{hint}</div>
+  {/if}
   <input
     class="govuk-input govuk-input--width-20"
     {id}
