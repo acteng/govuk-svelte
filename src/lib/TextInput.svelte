@@ -15,5 +15,5 @@
 
 <FormElement {label} {id}>
   <ErrorMessage {errorMessage} />
-  <input type="text" class="govuk-input" {id} bind:value />
+  <input type="text" class="govuk-input" {id} bind:value on:change />
 </FormElement>

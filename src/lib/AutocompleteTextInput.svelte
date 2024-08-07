@@ -20,6 +20,7 @@
     {id}
     list={`${id}-list`}
     bind:value
+    on:change
   />
   <datalist id={`${id}-list`}>
     {#each options as [value, label]}
