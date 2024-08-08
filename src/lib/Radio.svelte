@@ -22,7 +22,7 @@
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-label--s">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
       {label}
     </legend>
     <ErrorMessage {errorMessage} />
