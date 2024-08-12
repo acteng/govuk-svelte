@@ -16,11 +16,15 @@
   let actualChoices: [string, string][] = [...choices, ["other", "Other"]];
 
   function makeRadioValue(value: string): string {
+    // If the value isn't set, treat the radio as unset
+    if (!value) {
+      return "";
+    }
     return radioChoices.has(value) ? value : "other";
   }
   let radioValue = makeRadioValue(value);
 
-  function selectChanged() {
+  function radioChanged() {
     value = radioValue == "other" ? "" : radioValue;
   }
 </script>
@@ -31,7 +35,7 @@
     {hint}
     choices={actualChoices}
     bind:value={radioValue}
-    on:change={selectChanged}
+    on:change={radioChanged}
   />
 
   {#if radioValue == "other"}
