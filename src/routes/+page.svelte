@@ -20,7 +20,14 @@
 
 <AlphaBanner />
 
-<Radio label="Normal Radio" {choices} value="" />
+<Radio label="Normal radio" {choices} value="" />
+
+<Radio
+  label="Normal radio with label to the left"
+  {choices}
+  value=""
+  leftLabel
+/>
 
 <RadioWithCustom label="Radio with custom" {choices} value="" />
 

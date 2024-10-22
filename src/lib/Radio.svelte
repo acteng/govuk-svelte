@@ -9,8 +9,7 @@
   export let choices: [string, string][];
   // Lay out radio buttons horizontally and decrease font size
   export let inlineSmall = false;
-  // Place the label to the left of the radios, instead of the top. Only works
-  // in combination with inlineSmall.
+  // Place the label to the left of the radios, instead of the top
   export let leftLabel = false;
   // Show an error if no option is chosen
   export let required = false;
@@ -23,46 +22,57 @@
   let id = uuidv4();
 </script>
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    {#if !leftLabel}
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-        {label}
-      </legend>
-    {/if}
-    <ErrorMessage {errorMessage} />
-    {#if hint}
-      <div class="govuk-hint">{hint}</div>
-    {/if}
-    <div
-      class="govuk-radios"
-      class:govuk-radios--inline={inlineSmall}
-      class:govuk-radios--small={inlineSmall}
-      data-module="govuk-radios"
+<div style="display: flex">
+  {#if leftLabel && !inlineSmall}
+    <legend
+      class="govuk-fieldset__legend govuk-fieldset__legend--s"
+      style="margin-right: 8px"
     >
-      {#if leftLabel}
-        <legend
-          class="govuk-fieldset__legend govuk-fieldset__legend--s"
-          style="margin-right: 8px"
-        >
+      {label}
+    </legend>
+  {/if}
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      {#if !leftLabel}
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
           {label}
         </legend>
       {/if}
-      {#each choices as [thisValue, thisLabel]}
-        <div class="govuk-radios__item">
-          <input
-            class="govuk-radios__input"
-            id={id + thisValue}
-            type="radio"
-            bind:group={value}
-            value={thisValue}
-            on:change
-          />
-          <label class="govuk-label govuk-radios__label" for={id + thisValue}>
-            {thisLabel}
-          </label>
-        </div>
-      {/each}
-    </div>
-  </fieldset>
+      <ErrorMessage {errorMessage} />
+      {#if hint}
+        <div class="govuk-hint">{hint}</div>
+      {/if}
+      <div
+        class="govuk-radios"
+        class:govuk-radios--inline={inlineSmall}
+        class:govuk-radios--small={inlineSmall}
+        data-module="govuk-radios"
+      >
+        {#if leftLabel && inlineSmall}
+          <legend
+            class="govuk-fieldset__legend govuk-fieldset__legend--s"
+            style="margin-right: 8px"
+          >
+            {label}
+          </legend>
+        {/if}
+        {#each choices as [thisValue, thisLabel]}
+          <div class="govuk-radios__item">
+            <input
+              class="govuk-radios__input"
+              id={id + thisValue}
+              type="radio"
+              bind:group={value}
+              value={thisValue}
+              on:change
+            />
+            <label class="govuk-label govuk-radios__label" for={id + thisValue}>
+              {thisLabel}
+            </label>
+          </div>
+        {/each}
+      </div>
+    </fieldset>
+  </div>
 </div>
