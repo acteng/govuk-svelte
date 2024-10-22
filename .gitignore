@@ -12,3 +12,4 @@ static/
 *.css.map
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+*.swp

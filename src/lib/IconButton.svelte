@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { SecondaryButton } from "govuk-svelte";
+  import { SecondaryButton } from "./index.js";
 
   // Removes the margin beneath this button, so it can be used as a floating map control
 

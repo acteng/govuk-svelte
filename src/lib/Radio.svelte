@@ -9,6 +9,9 @@
   export let choices: [string, string][];
   // Lay out radio buttons horizontally and decrease font size
   export let inlineSmall = false;
+  // Place the label to the left of the radios, instead of the top. Only works
+  // in combination with inlineSmall.
+  export let leftLabel = false;
   // Show an error if no option is chosen
   export let required = false;
 
@@ -22,9 +25,11 @@
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-      {label}
-    </legend>
+    {#if !leftLabel}
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+        {label}
+      </legend>
+    {/if}
     <ErrorMessage {errorMessage} />
     {#if hint}
       <div class="govuk-hint">{hint}</div>
@@ -35,6 +40,14 @@
       class:govuk-radios--small={inlineSmall}
       data-module="govuk-radios"
     >
+      {#if leftLabel}
+        <legend
+          class="govuk-fieldset__legend govuk-fieldset__legend--s"
+          style="margin-right: 8px"
+        >
+          {label}
+        </legend>
+      {/if}
       {#each choices as [thisValue, thisLabel]}
         <div class="govuk-radios__item">
           <input

@@ -24,6 +24,14 @@
 
 <RadioWithCustom label="Radio with custom" {choices} value="" />
 
+<Radio
+  label="Radio with label to the left"
+  {choices}
+  value=""
+  inlineSmall
+  leftLabel
+/>
+
 <Select label="Normal Select" {choices} value="" />
 
 <SelectWithCustom label="Select With Custom" {choices} value="" />
