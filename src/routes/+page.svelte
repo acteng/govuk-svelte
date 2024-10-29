@@ -8,6 +8,7 @@
     SelectWithCustom,
     Footer,
     StartButton,
+    SecondaryButton,
   } from "../lib/index.js";
   import { base } from "$app/paths";
 
@@ -42,5 +43,8 @@
 <Select label="Normal Select" {choices} value="" />
 
 <SelectWithCustom label="Select With Custom" {choices} value="" />
+
+<SecondaryButton noBottomMargin>Button without bottom margin</SecondaryButton>
+<p>Some text</p>
 
 <Footer />

@@ -1,3 +1,7 @@
+<script lang="ts">
+  export let noBottomMargin = false;
+</script>
+
 <button
   type="button"
   class="govuk-button govuk-button--secondary"
@@ -6,6 +10,13 @@
   on:click
   on:mouseenter
   on:mouseleave
+  class:no-bottom-margin={noBottomMargin}
 >
   <slot />
 </button>
+
+<style>
+  .no-bottom-margin {
+    margin-bottom: 0px;
+  }
+</style>
