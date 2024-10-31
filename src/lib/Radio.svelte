@@ -11,6 +11,8 @@
   export let inlineSmall = false;
   // Do not let the radio buttons wrap;
   export let nowrap = false;
+  // Remove bottom margin to save space;
+  export let noBottomMargin = false;
   // Place the label to the left of the radios, instead of the top
   export let leftLabel = false;
   // Show an error if no option is chosen
@@ -50,6 +52,7 @@
         class:govuk-radios--inline={inlineSmall}
         class:govuk-radios--small={inlineSmall}
         class:nowrap={nowrap}
+        class:no-bottom-margin={noBottomMargin}
         data-module="govuk-radios"
       >
         {#if leftLabel && inlineSmall}
@@ -83,5 +86,9 @@
 <style>
   .nowrap {
     flex-wrap: nowrap;
+  }
+
+  .no-bottom-margin {
+    margin-bottom: 0;
   }
 </style>
