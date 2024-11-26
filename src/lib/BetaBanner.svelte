@@ -5,7 +5,7 @@
       This is a new tool. Contact <a href="mailto:plan-your-active-travel-schemes@activetravelengland.gov.uk">
         the team 
       </a>
-      with any feedback or bug repots.
+      with any feedback or bug reports.
     </span>
   </p>
 </div>
