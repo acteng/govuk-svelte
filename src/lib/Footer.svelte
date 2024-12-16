@@ -1,10 +1,10 @@
 <script lang="ts">
   //optional link to accessiblity statement
-  export let accessibilityHref: string;
+  export let accessibilityHref: string | undefined;
   //optional link to privacy statement
-  export let privacyHref: string;
+  export let privacyHref: string | undefined;
   //optional link to cookie statement
-  export let cookiesHref: string;
+  export let cookiesHref: string | undefined;
   $: aLinkExists =
     accessibilityHref != undefined ||
     privacyHref != undefined ||
@@ -16,19 +16,25 @@
     <div class="govuk-footer__meta">
       {#if aLinkExists}
         <ul class="govuk-footer__inline-list">
-          <li class="govuk-footer__inline-list-item">
-            <a class="govuk-footer__link" href="{privacyHref}">Privacy</a>
-          </li>
+          {#if privacyHref}
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href={privacyHref}>Privacy</a>
+            </li>
+          {/if}
 
-          <li class="govuk-footer__inline-list-item">
-            <a class="govuk-footer__link" href="{accessibilityHref}">
-              Accessibility
-            </a>
-          </li>
+          {#if accessibilityHref}
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href={accessibilityHref}>
+                Accessibility
+              </a>
+            </li>
+          {/if}
 
-          <li class="govuk-footer__inline-list-item">
-            <a class="govuk-footer__link" href="{cookiesHref}">Cookies</a>
-          </li>
+          {#if cookiesHref}
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href={cookiesHref}>Cookies</a>
+            </li>
+          {/if}
         </ul>
       {/if}
       <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
