@@ -36,6 +36,7 @@
           © Crown copyright
         </a>
       </div>
+      <slot />
     </div>
   </div>
 </footer>
