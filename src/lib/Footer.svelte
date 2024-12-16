@@ -1,6 +1,36 @@
+<script lang="ts">
+  //optional link to accessiblity statement
+  export let accessibilityHref: string;
+  //optional link to privacy statement
+  export let privacyHref: string;
+  //optional link to cookie statement
+  export let cookiesHref: string;
+  $: aLinkExists =
+    accessibilityHref != undefined ||
+    privacyHref != undefined ||
+    cookiesHref != undefined;
+</script>
+
 <footer class="govuk-footer">
   <div class="govuk-width-container">
     <div class="govuk-footer__meta">
+      {#if aLinkExists}
+        <ul class="govuk-footer__inline-list">
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="{privacyHref}">Privacy</a>
+          </li>
+
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="{accessibilityHref}">
+              Accessibility
+            </a>
+          </li>
+
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="{cookiesHref}">Cookies</a>
+          </li>
+        </ul>
+      {/if}
       <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
         <svg
           aria-hidden="true"
@@ -36,7 +66,6 @@
           © Crown copyright
         </a>
       </div>
-      <slot />
     </div>
   </div>
 </footer>
