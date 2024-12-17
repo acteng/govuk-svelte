@@ -1,17 +1,13 @@
 <script lang="ts">
   //optional link to a page about the site/service
-  export let aboutHref: string | undefined;
+  export let aboutHref: string | undefined = undefined;
   //optional link to privacy statement
-  export let privacyHref: string | undefined;
+  export let privacyHref: string | undefined = undefined;
   //optional link to accessiblity statement
-  export let accessibilityHref: string | undefined;
+  export let accessibilityHref: string | undefined = undefined;
   //optional link to cookie statement
-  export let cookiesHref: string | undefined;
-  $: aLinkExists =
-    aboutHref != undefined ||
-    privacyHref != undefined ||
-    accessibilityHref != undefined ||
-    cookiesHref != undefined;
+  export let cookiesHref: string | undefined = undefined;
+  $: aLinkExists = aboutHref || privacyHref || accessibilityHref || cookiesHref;
 </script>
 
 <footer class="govuk-footer">
