@@ -1,6 +1,47 @@
+<script lang="ts">
+  //optional link to a page about the site/service
+  export let aboutHref: string | undefined = undefined;
+  //optional link to privacy statement
+  export let privacyHref: string | undefined = undefined;
+  //optional link to accessiblity statement
+  export let accessibilityHref: string | undefined = undefined;
+  //optional link to cookie statement
+  export let cookiesHref: string | undefined = undefined;
+  $: aLinkExists = aboutHref || privacyHref || accessibilityHref || cookiesHref;
+</script>
+
 <footer class="govuk-footer">
   <div class="govuk-width-container">
     <div class="govuk-footer__meta">
+      {#if aLinkExists}
+        <ul class="govuk-footer__inline-list">
+          {#if aboutHref}
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href={aboutHref}>About</a>
+            </li>
+          {/if}
+
+          {#if privacyHref}
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href={privacyHref}>Privacy</a>
+            </li>
+          {/if}
+
+          {#if accessibilityHref}
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href={accessibilityHref}>
+                Accessibility
+              </a>
+            </li>
+          {/if}
+
+          {#if cookiesHref}
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href={cookiesHref}>Cookies</a>
+            </li>
+          {/if}
+        </ul>
+      {/if}
       <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
         <svg
           aria-hidden="true"
