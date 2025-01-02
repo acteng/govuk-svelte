@@ -1,16 +1,16 @@
 <script lang="ts">
   import "../style/main.css";
+  import { base } from "$app/paths";
   import {
     AlphaBanner,
+    Footer,
     Radio,
     RadioWithCustom,
+    SecondaryButton,
     Select,
     SelectWithCustom,
-    Footer,
     StartButton,
-    SecondaryButton,
   } from "../lib/index.js";
-  import { base } from "$app/paths";
 
   let choices = ["Option A", "Option B", "Option C"].map(
     (x) => [x, x] as [string, string],

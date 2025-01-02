@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { FormElement } from "./index.js";
   import { v4 as uuidv4 } from "uuid";
+  import { FormElement } from "./index.js";
 
   export let label: string;
   export let value: string;

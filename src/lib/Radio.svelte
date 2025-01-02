@@ -51,7 +51,7 @@
         class="govuk-radios"
         class:govuk-radios--inline={inlineSmall}
         class:govuk-radios--small={inlineSmall}
-        class:nowrap={nowrap}
+        class:nowrap
         class:no-bottom-margin={noBottomMargin}
         data-module="govuk-radios"
       >
