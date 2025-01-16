@@ -1,8 +1,8 @@
 <script lang="ts">
   import "../style/main.css";
-  import { base } from "$app/paths";
   import {
     AlphaBanner,
+    DateInput,
     Footer,
     Radio,
     RadioWithCustom,
@@ -12,6 +12,7 @@
     StartButton,
   } from "../lib/index.js";
 
+  let dateValue = "";
   let choices = ["Option A", "Option B", "Option C"].map(
     (x) => [x, x] as [string, string],
   );
@@ -41,6 +42,11 @@
 />
 
 <Select label="Normal Select" {choices} value="" />
+
+<DateInput bind:value={dateValue} label="example date input" setToTodayButton />
+
+<p>Date input above: {dateValue}</p>
+
 
 <SelectWithCustom label="Select With Custom" {choices} value="" />
 
