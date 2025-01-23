@@ -18,7 +18,7 @@
   $: {
     errorMessage = "";
     const dayInCorrectRange =
-      parseInt(dayString) > 0 || parseInt(dayString) < 32;
+      parseInt(dayString) > 0 && parseInt(dayString) < 32;
     const monthInCorrectRange =
       parseInt(monthString) > 0 && parseInt(monthString) < 13;
     const yearCorrectLength = yearString.length === 4;
