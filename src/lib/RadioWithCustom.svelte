@@ -13,7 +13,7 @@
   export let value: string;
 
   let radioChoices = new Set(choices.map((pair) => pair[0]));
-  let actualChoices: [string, string][] = [...choices, ["other", "Other"]];
+  let actualChoices: [string, string][] = [...choices, ["other", "Other, please specify"]];
 
   function makeRadioValue(value: string): string {
     // If the value isn't set, treat the radio as unset
