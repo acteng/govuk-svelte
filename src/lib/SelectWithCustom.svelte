@@ -16,7 +16,7 @@
   export let value: string;
 
   let selectChoices = new Set(choices.map((pair) => pair[0]));
-  let actualChoices: [string, string][] = [...choices, ["other", "Other"]];
+  let actualChoices: [string, string][] = [...choices, ["other", "Other, please specify"]];
   if (emptyOption) {
     selectChoices.add("");
   }
