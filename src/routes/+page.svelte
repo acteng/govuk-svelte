@@ -11,10 +11,13 @@
     SelectWithCustom,
     StartButton,
   } from "../lib/index.js";
+  import DecimalInput from "$lib/DecimalInput.svelte";
 
   let choices = ["Option A", "Option B", "Option C"].map(
     (x) => [x, x] as [string, string],
   );
+
+  let numberValue = 0;
 </script>
 
 <StartButton on:click={() => window.alert("Start clicked")} />
@@ -46,5 +49,14 @@
 
 <SecondaryButton noBottomMargin>Button without bottom margin</SecondaryButton>
 <p>Some text</p>
+
+<DecimalInput
+  label="Test decimal input"
+  value={numberValue}
+  width={10}
+  min={0}
+  max={50}
+  requiredDecimalPlaces={2}
+/>
 
 <Footer />
