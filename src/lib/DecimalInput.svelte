@@ -8,7 +8,7 @@
   // Inclusive
   export let min: number | undefined = undefined;
   export let max: number | undefined = undefined;
-  export let hint: string;
+  export let hint: string | undefined = undefined;
 
   let stringValue: string | undefined = value?.toString();
 
