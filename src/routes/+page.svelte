@@ -56,7 +56,7 @@
   width={10}
   min={0}
   max={50}
-  requiredDecimalPlaces={2}
+  hint={"Please provide 2 decimal places"}
 />
 
 <Footer />

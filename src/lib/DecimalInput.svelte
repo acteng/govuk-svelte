@@ -8,7 +8,7 @@
   // Inclusive
   export let min: number | undefined = undefined;
   export let max: number | undefined = undefined;
-  export let requiredDecimalPlaces: number = 0;
+  export let hint: string;
 
   let stringValue: string | undefined = value?.toString();
 
@@ -32,21 +32,15 @@
     if (max != undefined && n > max) {
       return `Please enter a number that's at most ${max};`;
     }
-    if (
-      requiredDecimalPlaces > 0 &&
-      (!stringValue.includes(".") ||
-        (stringValue.includes(".") &&
-          stringValue.split(".").length > 1 &&
-          stringValue.split(".")[1].length < requiredDecimalPlaces))
-    ) {
-      return `Please provide at least ${requiredDecimalPlaces} decimal places`;
-    }
     return "";
   }
 </script>
 
 <FormElement {label} {id}>
   <ErrorMessage errorMessage={validate(stringValue)} />
+  {#if hint}
+    <div class="govuk-hint">{hint}</div>
+  {/if}
   <input
     type="text"
     inputmode="numeric"
