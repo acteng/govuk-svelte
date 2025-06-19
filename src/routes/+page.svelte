@@ -1,6 +1,8 @@
 <script lang="ts">
   import "../style/main.css";
   import { base } from "$app/paths";
+  import DecimalInput from "$lib/DecimalInput.svelte";
+  import Header from "$lib/Header.svelte";
   import {
     AlphaBanner,
     Footer,
@@ -11,7 +13,6 @@
     SelectWithCustom,
     StartButton,
   } from "../lib/index.js";
-  import DecimalInput from "$lib/DecimalInput.svelte";
 
   let choices = ["Option A", "Option B", "Option C"].map(
     (x) => [x, x] as [string, string],
@@ -20,6 +21,9 @@
   let numberValue = 0;
 </script>
 
+<div style="width:70vw;">
+  <Header />
+</div>
 <StartButton on:click={() => window.alert("Start clicked")} />
 
 <AlphaBanner />
@@ -59,4 +63,4 @@
   hint={"Please provide 2 decimal places"}
 />
 
-<Footer />
+<Footer footerTopBarColour="green" />

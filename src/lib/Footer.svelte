@@ -7,10 +7,14 @@
   export let accessibilityHref: string | undefined = undefined;
   //optional link to cookie statement
   export let cookiesHref: string | undefined = undefined;
+  //optional colour for the bar at the top the footer
+  export let footerTopBarColour: string | undefined = undefined; 
+
   $: aLinkExists = aboutHref || privacyHref || accessibilityHref || cookiesHref;
 </script>
+ 
+<footer class="govuk-footer" style={`border-top: 10px solid ${footerTopBarColour || "#1d70b8" };`}>
 
-<footer class="govuk-footer">
   <div class="govuk-width-container">
     <div class="govuk-footer__meta">
       {#if aLinkExists}
