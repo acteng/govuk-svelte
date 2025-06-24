@@ -11,6 +11,7 @@ export { default as FileInput } from "./FileInput.svelte";
 export { default as Footer } from "./Footer.svelte";
 export { default as FormElement } from "./FormElement.svelte";
 export { default as GenericSelect } from "./GenericSelect.svelte";
+export { default as Header } from "./Header.svelte";
 export { default as IconButton } from "./IconButton.svelte";
 export { default as MoneyInput } from "./MoneyInput.svelte";
 export { default as NumberInput } from "./NumberInput.svelte";

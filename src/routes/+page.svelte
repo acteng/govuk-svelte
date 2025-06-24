@@ -1,11 +1,10 @@
 <script lang="ts">
   import "../style/main.css";
-  import { base } from "$app/paths";
-  import DecimalInput from "$lib/DecimalInput.svelte";
-  import Header from "$lib/Header.svelte";
   import {
     AlphaBanner,
+    DecimalInput,
     Footer,
+    Header,
     Radio,
     RadioWithCustom,
     SecondaryButton,
@@ -22,7 +21,7 @@
 </script>
 
 <div style="width:70vw;">
-  <Header />
+  <Header headerBarColour="green" />
 </div>
 <StartButton on:click={() => window.alert("Start clicked")} />
 
