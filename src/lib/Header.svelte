@@ -1,7 +1,7 @@
 <script lang="ts">
+  export let text: string | undefined = undefined;
   export let headerBarColour: string | undefined = undefined;
 </script>
-
 <header class="govuk-header" data-module="govuk-header">
   <div
     class="govuk-header__container govuk-width-container"
@@ -18,9 +18,9 @@
           width="148"
           fill="currentcolor"
           class="govuk-header__logotype"
-          aria-label="GOV.UK"
+          aria-label={text || "GOV.UK"}
         >
-          <title>GOV.UK</title>
+          <title>{text || "GOV.UK"}</title>
           <g>
             <circle cx="20" cy="17.6" r="3.7" />
             <circle cx="10.2" cy="23.5" r="3.7" />

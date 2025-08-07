@@ -21,7 +21,7 @@
 </script>
 
 <div style="width:70vw;">
-  <Header headerBarColour="green" />
+  <Header text="example" headerBarColour="green" />
 </div>
 <StartButton on:click={() => window.alert("Start clicked")} />
 
