@@ -13,3 +13,9 @@ static/
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 *.swp
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
