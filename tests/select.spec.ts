@@ -7,9 +7,9 @@ test.beforeEach(async ({ page }) => {
 
 test("Select selection displayed", async ({ page, }) => {
     await new Promise(resolve => setTimeout(resolve, 4000));
-    await page.getByLabel("Normal Select").selectOption("Option A");
-    await expect(page.getByText("Select selection is: Option A")).toBeVisible();
+    await page.getByLabel("Normal Select").selectOption("Selection A");
+    await expect(page.getByText("Select selection is: Selection A")).toBeVisible();
 
-    await page.getByLabel("Normal Select").selectOption("Option C");
-    await expect(page.getByText("Select selection is: Option C")).toBeVisible();
+    await page.getByLabel("Normal Select").selectOption("Selection C");
+    await expect(page.getByText("Select selection is: Selection C")).toBeVisible();
 });
