@@ -51,6 +51,6 @@
   "dependencies": {
     "govuk-frontend": "^5.10.2",
     "sass": "^1.77.8",
-    "uuid": "^9.0.1"
+    "uuid": "^14.0.0"
   }
 }
