@@ -3,7 +3,7 @@
   import { FormElement } from "./index.js";
 
   export let label: string;
-  export let accept: string="";
+  export let accept: string = "";
   // Called with the filename and file contents as text
   export let onLoad: (filename: string, contents: string) => void;
 
