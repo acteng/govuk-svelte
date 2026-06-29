@@ -2,7 +2,6 @@
   import "../style/main.css";
   import { base } from "$app/paths";
   import DecimalInput from "$lib/DecimalInput.svelte";
-  import Header from "$lib/Header.svelte";
   import {
     AlphaBanner,
     Footer,
@@ -21,9 +20,6 @@
   let numberValue = 0;
 </script>
 
-<div style="width:70vw;">
-  <Header />
-</div>
 <StartButton on:click={() => window.alert("Start clicked")} />
 
 <AlphaBanner />
