@@ -12,6 +12,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  workers: 1,
   webServer: {
     command: "npx vite --port 8080",
     port: 8080,
