@@ -39,6 +39,7 @@
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "@types/node": "^24.2.0",
     "@types/uuid": "^9.0.8",
+    "playwright-ctrf-json-reporter": "^0.0.22",
     "prettier": "^3.1.1",
     "prettier-plugin-svelte": "^3.1.2",
     "publint": "~0.3.0",
@@ -53,7 +54,6 @@
   "type": "module",
   "dependencies": {
     "govuk-frontend": "^5.10.2",
-    "playwright-ctrf-json-reporter": "^0.0.22",
     "sass": "~1.102.0",
     "uuid": "^9.0.1"
   },
